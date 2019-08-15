@@ -4,7 +4,7 @@
 #
 Name     : mvn-jetty-parent
 Version  : 8
-Release  : 6
+Release  : 7
 URL      : https://github.com/eclipse/jetty.parent/archive/jetty-parent-8.tar.gz
 Source0  : https://github.com/eclipse/jetty.parent/archive/jetty-parent-8.tar.gz
 Source1  : https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-parent/11/jetty-parent-11.pom
