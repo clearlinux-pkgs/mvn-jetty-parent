@@ -4,7 +4,7 @@
 #
 Name     : mvn-jetty-parent
 Version  : 8
-Release  : 3
+Release  : 4
 URL      : https://github.com/eclipse/jetty.parent/archive/jetty-parent-8.tar.gz
 Source0  : https://github.com/eclipse/jetty.parent/archive/jetty-parent-8.tar.gz
 Source1  : https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-parent/14/jetty-parent-14.pom
@@ -12,7 +12,8 @@ Source2  : https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-parent/18/jett
 Source3  : https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-parent/23/jetty-parent-23.pom
 Source4  : https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-parent/25/jetty-parent-25.pom
 Source5  : https://repo1.maven.org/maven2/org/mortbay/jetty/jetty-parent/10/jetty-parent-10.pom
-Source6  : https://repo1.maven.org/maven2/org/mortbay/jetty/jetty-parent/7/jetty-parent-7.pom
+Source6  : https://repo1.maven.org/maven2/org/mortbay/jetty/jetty-parent/11/jetty-parent-11.pom
+Source7  : https://repo1.maven.org/maven2/org/mortbay/jetty/jetty-parent/7/jetty-parent-7.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0 EPL-1.0
@@ -30,6 +31,7 @@ data components for the mvn-jetty-parent package.
 
 
 %prep
+%setup -q -n jetty.parent-jetty-parent-8
 
 %build
 
@@ -49,8 +51,11 @@ cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jetty/jetty
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/mortbay/jetty/jetty-parent/10
 cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/mortbay/jetty/jetty-parent/10/jetty-parent-10.pom
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/mortbay/jetty/jetty-parent/11
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/mortbay/jetty/jetty-parent/11/jetty-parent-11.pom
+
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/mortbay/jetty/jetty-parent/7
-cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/mortbay/jetty/jetty-parent/7/jetty-parent-7.pom
+cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/mortbay/jetty/jetty-parent/7/jetty-parent-7.pom
 
 
 %files
@@ -63,4 +68,5 @@ cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/mortbay/jetty/jetty
 /usr/share/java/.m2/repository/org/eclipse/jetty/jetty-parent/23/jetty-parent-23.pom
 /usr/share/java/.m2/repository/org/eclipse/jetty/jetty-parent/25/jetty-parent-25.pom
 /usr/share/java/.m2/repository/org/mortbay/jetty/jetty-parent/10/jetty-parent-10.pom
+/usr/share/java/.m2/repository/org/mortbay/jetty/jetty-parent/11/jetty-parent-11.pom
 /usr/share/java/.m2/repository/org/mortbay/jetty/jetty-parent/7/jetty-parent-7.pom
